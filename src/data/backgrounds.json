@@ -2,42 +2,42 @@
   "backgrounds": [
     {
       "id": 1,
-      "url": "https://source.unsplash.com/random/1920x1080/?nature,water",
+      "url": "https://images.unsplash.com/photo-1517279690557-f9e1ca3143b6?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "A serene lake surrounded by trees"
     },
     {
       "id": 2,
-      "url": "https://source.unsplash.com/random/1920x1080/?city,night",
+      "url": "https://images.unsplash.com/photo-1499346097910-a5f126ca918d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "City skyline at night"
     },
     {
       "id": 3,
-      "url": "https://source.unsplash.com/random/1920x1080/?mountain,sunset",
+      "url": "https://plus.unsplash.com/premium_photo-1666700641261-407c0c5ccb42?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Mountain view during sunset"
     },
     {
       "id": 4,
-      "url": "https://source.unsplash.com/random/1920x1080/?beach,sunrise",
+      "url": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "A peaceful beach at sunrise"
     },
     {
       "id": 5,
-      "url": "https://source.unsplash.com/random/1920x1080/?forest,mist",
+      "url": "https://images.unsplash.com/photo-1532124488285-da35ad96121f?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Foggy forest with tall trees"
     },
     {
       "id": 6,
-      "url": "https://source.unsplash.com/random/1920x1080/?desert,dunes",
+      "url": "https://images.unsplash.com/photo-1632262254638-71e81a128123?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Golden sand dunes in the desert"
     },
     {
       "id": 7,
-      "url": "https://source.unsplash.com/random/1920x1080/?ocean,clouds",
+      "url": "https://images.unsplash.com/photo-1505860125062-3ce932953cf5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Ocean waves under cloudy skies"
     },
     {
       "id": 8,
-      "url": "https://source.unsplash.com/random/1920x1080/?forest,autumn",
+      "url": "https://images.unsplash.com/photo-1475092432448-fe76c45a8d6d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "description": "Autumn leaves in a forest"
     }
   ]
