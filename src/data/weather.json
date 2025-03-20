@@ -1,0 +1,37 @@
+[
+  {
+    "temperature": {
+      "fahrenheit": 72,
+      "celsius": 22
+    },
+    "description": "sunny"
+  },
+  {
+    "temperature": {
+      "fahrenheit": 55,
+      "celsius": 13
+    },
+    "description": "cloudy"
+  },
+  {
+    "temperature": {
+      "fahrenheit": 85,
+      "celsius": 29
+    },
+    "description": "hot"
+  },
+  {
+    "temperature": {
+      "fahrenheit": 45,
+      "celsius": 7
+    },
+    "description": "rainy"
+  },
+  {
+    "temperature": {
+      "fahrenheit": 32,
+      "celsius": 0
+    },
+    "description": "snowy"
+  }
+]

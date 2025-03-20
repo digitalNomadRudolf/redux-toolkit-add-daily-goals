@@ -1,13 +1,14 @@
 import RandomBackgroundContainer from "./components/RandomBackgroundContainer";
+import WeatherDisplay from "./components/WeatherDisplay";
 
 function App() {
   return (
     <div className="portfolio-page">
+      <WeatherDisplay />
       <RandomBackgroundContainer />
-      {/* <WeatherDisplay />
-      <RandomQuote />
-      <AddGoal />
-      <GoalList /> */}
+      {/* <RandomQuote /> */}
+      {/* <AddGoal /> */}
+      {/* <GoalList />  */}
     </div>
   );
 }
