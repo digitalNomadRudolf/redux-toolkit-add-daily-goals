@@ -32,7 +32,7 @@ const RandomBackgroundContainer = () => {
   return (
     <>
       <RandomBackground background={currentBackground} />
-      <div className="arrows flex justify-between mx-5 items-center relative h-full">
+      <div className="arrows absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between items-center w-full px-[10px] h-full">
         <button className="h-fit" onClick={handlePrevBg}>
           {"<"}
         </button>
