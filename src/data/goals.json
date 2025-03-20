@@ -1,0 +1,54 @@
+{
+  "goals": [
+    {
+      "id": 1,
+      "name": "Learn React",
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "name": "Complete a coding challenge",
+      "isDone": true
+    },
+    {
+      "id": 3,
+      "name": "Read a new book every month",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "name": "Exercise 3 times a week",
+      "isDone": true
+    },
+    {
+      "id": 5,
+      "name": "Build a personal portfolio",
+      "isDone": false
+    },
+    {
+      "id": 6,
+      "name": "Meditate daily",
+      "isDone": false
+    },
+    {
+      "id": 7,
+      "name": "Improve public speaking skills",
+      "isDone": true
+    },
+    {
+      "id": 8,
+      "name": "Learn a new language",
+      "isDone": false
+    },
+    {
+      "id": 9,
+      "name": "Travel to a new country",
+      "isDone": false
+    },
+    {
+      "id": 10,
+      "name": "Save $5000 for emergencies",
+      "isDone": true
+    }
+  ]
+}
