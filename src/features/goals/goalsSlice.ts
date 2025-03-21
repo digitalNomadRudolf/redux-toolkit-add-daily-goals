@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Goal {
-  id: number;
+  id: string;
   name: string;
   isDone: boolean;
 }
@@ -21,10 +21,10 @@ const goalsSlice = createSlice({
     addGoal: (state, action: PayloadAction<Goal>) => {
       state.goals.push(action.payload);
     },
-    removeGoal: (state, action: PayloadAction<number>) => {
+    removeGoal: (state, action: PayloadAction<string>) => {
       state.goals = state.goals.filter((goal) => goal.id !== action.payload);
     },
-    toggleDone: (state, action: PayloadAction<number>) => {
+    toggleDone: (state, action: PayloadAction<string>) => {
       // find the goal with certain id and toggle that isDone
       const goal = state.goals.find((goal) => goal.id === action.payload);
       if (goal) {
