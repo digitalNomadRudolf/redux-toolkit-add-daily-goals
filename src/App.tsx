@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { fetchWeather } from "./features/weather/weatherSlice";
+import { fetchRandomQuote } from "./features/quotes/quotesSlice";
 import { useDispatch } from "react-redux";
 import AddGoal from "./components/AddGoal";
 import type { AppDispatch } from "./store";
@@ -13,6 +14,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(fetchWeather());
+    dispatch(fetchRandomQuote());
   }, [dispatch]);
 
   return (
