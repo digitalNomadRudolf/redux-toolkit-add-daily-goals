@@ -15,7 +15,7 @@ const WeatherDisplay = () => {
 
   return (
     <div className="flex relative z-10 text-xl text-white items-center justify-end px-10 py-5">
-      <img src={icon} alt={description} />
+      <img src={icon as string} alt={description} />
       <div className="flex flex-col">
         <div className="temperature">{temperature} °</div>
         <div className="description uppercase text-base">{description}</div>
