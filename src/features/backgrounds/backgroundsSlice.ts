@@ -10,7 +10,6 @@ export const fetchBackgrounds = createAsyncThunk(
       `https://api.unsplash.com/photos/random?client_id=${accessKey}&count=5`
     );
     const data = await response.json();
-    console.log({ data });
     return data;
   }
 );
