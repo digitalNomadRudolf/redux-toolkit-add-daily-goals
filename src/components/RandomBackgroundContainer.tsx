@@ -1,33 +1,48 @@
-import { useState } from "react";
-import backgroundData from "../data/backgrounds.json";
+import { useEffect } from "react";
 import RandomBackground from "./RandomBackground";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../store";
+import {
+  fetchBackgrounds,
+  setCurrentBackgroundIndex,
+} from "../features/backgrounds/backgroundsSlice";
 // Render RandomBackground component and handle logic
 const RandomBackgroundContainer = () => {
-  const [backgrounds] = useState(backgroundData.backgrounds);
-  // randomly set the background
-  const randNumber = Math.floor(Math.random() * backgrounds.length);
-  const [currentBackground, setCurrentBackground] = useState(
-    backgrounds[randNumber]
+  const dispatch = useDispatch<AppDispatch>();
+  const { backgrounds, currentBackgroundIndex, isLoading, error } = useSelector(
+    (state: RootState) => state.backgrounds
   );
+
+  useEffect(() => {
+    dispatch(fetchBackgrounds());
+  }, [dispatch]);
 
   // control previous and next backround
   const handleNextBg = () => {
-    setCurrentBackground((prev) => {
-      const currentIndex = backgrounds.indexOf(prev);
-      const nextIndex =
-        currentIndex === backgrounds.length - 1 ? 0 : currentIndex + 1;
-      return backgrounds[nextIndex];
-    });
+    dispatch(
+      setCurrentBackgroundIndex(
+        (currentBackgroundIndex + 1) % backgrounds.length
+      )
+    );
   };
 
   const handlePrevBg = () => {
-    setCurrentBackground((prev) => {
-      const currentIndex = backgrounds.indexOf(prev);
-      const prevIndex =
-        currentIndex === 0 ? backgrounds.length - 1 : currentIndex - 1;
-      return backgrounds[prevIndex];
-    });
+    dispatch(
+      setCurrentBackgroundIndex(
+        (currentBackgroundIndex - 1 + backgrounds.length) % backgrounds.length
+      )
+    );
   };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Something went wrong while fetching the background</div>;
+  }
+
+  const currentBackground = backgrounds[currentBackgroundIndex];
 
   return (
     <>
