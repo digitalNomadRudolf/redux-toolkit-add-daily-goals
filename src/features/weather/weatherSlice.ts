@@ -18,7 +18,7 @@ const weatherSlice = createSlice({
   initialState: {
     temperature: 0,
     description: "",
-    icon: "",
+    icon: null,
     isLoading: false,
     error: null as string | null,
   },
