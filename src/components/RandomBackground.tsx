@@ -1,4 +1,3 @@
-// takes and displays a background
 type BackgroundType = {
   id: number;
   url: string;
