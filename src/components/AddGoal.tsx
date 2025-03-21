@@ -1,14 +1,26 @@
 import { KeyboardEventHandler, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addGoal } from "../features/goals/goalsSlice";
+import { v4 as uuidv4 } from "uuid";
 
 const AddGoal = () => {
-  const [goal, setGoal] = useState({});
+  const dispatch = useDispatch();
+  const [goal, setGoal] = useState("");
 
   const handleSubmit: KeyboardEventHandler = (event) => {
     const value = (event.currentTarget as HTMLInputElement).value;
     if (!value) return;
 
     if (event.key === "Enter") {
-      alert(`Goal will be added with value: ${value}`);
+      // create new goal
+      const newGoal = {
+        id: uuidv4(),
+        name: goal,
+        isDone: false,
+      };
+      setGoal("");
+      // dispatch addGoal action with the goal
+      dispatch(addGoal(newGoal));
     }
   };
 
@@ -22,6 +34,7 @@ const AddGoal = () => {
         type="text"
         onChange={(event) => setGoal(event.currentTarget.value)}
         onKeyDown={(event) => handleSubmit(event)}
+        value={goal}
       />
     </div>
   );
