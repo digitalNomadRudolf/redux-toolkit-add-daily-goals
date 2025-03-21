@@ -1,19 +1,24 @@
-import weatherData from "../data/weather.json";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 const WeatherDisplay = () => {
-  const temperature = weatherData[3].temperature.fahrenheit;
-  const weatherDescription = weatherData[3].description;
+  const weather = useSelector((state: RootState) => state.weather);
+  const { temperature, description, icon, error, isLoading } = weather;
+
+  if (isLoading) {
+    return <div>Loading weather...</div>;
+  }
+
+  if (error) {
+    return <div>Couldn't load weather...</div>;
+  }
 
   return (
-    <div className="flex relative z-10 text-xl text-white items-center justify-end px-10">
-      {/* weather icon */}
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="rainy icon" />
-      {/* flex flex col with the temperature & temperature description */}
+    <div className="flex relative z-10 text-xl text-white items-center justify-end px-10 py-5">
+      <img src={icon} alt={description} />
       <div className="flex flex-col">
         <div className="temperature">{temperature} °</div>
-        <div className="description uppercase text-base">
-          {weatherDescription}
-        </div>
+        <div className="description uppercase text-base">{description}</div>
       </div>
     </div>
   );

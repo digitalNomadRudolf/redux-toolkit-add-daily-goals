@@ -1,10 +1,20 @@
+import { useEffect } from "react";
+import { fetchWeather } from "./features/weather/weatherSlice";
+import { useDispatch } from "react-redux";
 import AddGoal from "./components/AddGoal";
+import type { AppDispatch } from "./store";
 import RandomBackgroundContainer from "./components/RandomBackgroundContainer";
 import RandomQuote from "./components/RandomQuote";
 import WeatherDisplay from "./components/WeatherDisplay";
 import GoalList from "./features/goals/GoalList";
 
-function App() {
+export default function App() {
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(fetchWeather());
+  }, [dispatch]);
+
   return (
     <>
       <RandomBackgroundContainer />
@@ -19,5 +29,3 @@ function App() {
     </>
   );
 }
-
-export default App;
