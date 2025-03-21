@@ -31,7 +31,7 @@ const weatherSlice = createSlice({
       .addCase(fetchWeather.fulfilled, (state, action) => {
         state.isLoading = false;
         // set the temperature to the correct fetched temp
-        state.temperature = action.payload.temp_f;
+        state.temperature = action.payload.temp_c;
         state.description = action.payload.condition.text;
         state.icon = action.payload.condition.icon;
       })
