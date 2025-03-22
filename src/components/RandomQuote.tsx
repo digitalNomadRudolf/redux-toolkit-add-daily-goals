@@ -2,14 +2,12 @@ import { useSelector } from "react-redux";
 import { RootState } from "../store";
 
 const RandomQuote = () => {
-  const {
-    quote: fetchedQuote,
-    isLoading,
-    error,
-  } = useSelector((state: RootState) => state.quote);
+  const { quote, author, isLoading, error } = useSelector(
+    (state: RootState) => state.quote
+  );
   // format quote as some quotes have each word capitalized
   const formattedQuote =
-    fetchedQuote.charAt(0).toUpperCase() + fetchedQuote.slice(1).toLowerCase();
+    quote.charAt(0).toUpperCase() + quote.slice(1).toLowerCase();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -20,8 +18,9 @@ const RandomQuote = () => {
   }
 
   return (
-    <div className="random-quote drop-shadow-lg p-6 relative z-10 w-full mx-auto text-white text-2xl flex justify-center">
-      "{formattedQuote}"
+    <div className="random-quote drop-shadow-lg p-6 relative z-10 w-full mx-auto text-white text-2xl flex flex-col text-center gap-2 justify-center">
+      <div className="quote">"{formattedQuote}"</div>
+      <div className="author text-base">{author}</div>
     </div>
   );
 };
