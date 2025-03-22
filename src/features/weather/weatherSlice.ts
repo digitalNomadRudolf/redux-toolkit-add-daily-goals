@@ -6,7 +6,7 @@ export const fetchWeather = createAsyncThunk(
   "weather/fetchWeather",
   async () => {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Lisbon`
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Lisbon`
     );
     const data = await response.json();
     return data.current;
