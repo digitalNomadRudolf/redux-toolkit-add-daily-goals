@@ -7,7 +7,7 @@ export const fetchBackgrounds = createAsyncThunk(
   "backgrounds/fetchBackgrounds",
   async () => {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${accessKey}&count=5`
+      `https://api.unsplash.com/photos/random?client_id=${accessKey}&query=nature&count=5`
     );
     const data = await response.json();
     return data;
